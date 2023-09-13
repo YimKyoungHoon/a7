@@ -1,0 +1,44 @@
+footer{
+    width: 100%;
+    padding-top: 100px;
+    background-color: #000;
+    .inner{
+        width: 1180px;
+        margin: 0 auto;        
+        img{
+            width: 400px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 30px;             
+        }                    
+        ul{
+            margin-top: 50px;
+            float: right;
+            li{
+                float: left;
+                margin-left: 20px;
+                a{
+                    font: bold 16px/1 "arial";
+                    color: #fff;
+                    padding: 14px 40px;
+                    &:hover{
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+            }
+            a{
+                float: left;
+                font-size: 35px;
+                color: #fff;
+                padding: 14px 40px;
+                :hover{
+                    color: orange;
+                }
+            }
+        }
+        p{
+            color: #fff;
+        }        
+    }
+}
