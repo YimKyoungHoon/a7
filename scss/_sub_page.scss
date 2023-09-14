@@ -40,52 +40,6 @@
                 }
             }
         }
-        .btn{
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: none;
-            font-size: 20px;
-            color: #fff;            
-        }
-        .menuMobile{
-            width: 270px;
-            height: 100vh;
-            background-color: #555;
-            position: fixed;
-            top: 0;
-            // left: -270px;
-            padding: 35px 35px;
-            z-index: 10;
-            transition: 0.5s;
-            &.on{
-                left: 0;
-            }
-            h1{
-                padding-bottom: 30px;
-                border-bottom: 1px solid #000;
-                a{
-                    display: block;
-                    font: bold 30px/1 "Sedgwick Ave Display";
-                    color: orange;
-                    text-align: center;
-                }
-            }
-            #menuMo{
-                li{
-                    a{
-                        display: block;
-                        width: 100%;
-                        padding: 30px 0;
-                        border-bottom: 1px solid #444;
-                        font: bold 20px/1 "arial";
-                        color: #aaa;
-                        text-align: center;
-                    }
-                }
-            }
-        }
     }    
 }
 .content{
@@ -139,5 +93,33 @@
         p{
             color: #fff;
         }        
+    }
+}
+
+@media screen and (max-width: 639px){
+    #header_sub{
+        .inner{
+            width: 100%;
+            .pic{
+
+                width: 240px;
+                height: 80px;
+                a{
+                    img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    }
+                }
+            }
+            nav{     
+                #menuWeb{
+                    display: none;
+                }
+            }
+            .btn{
+                display: block;
+            }
+        }    
     }
 }

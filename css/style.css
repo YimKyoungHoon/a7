@@ -116,38 +116,6 @@ header .inner .menuMobile #menuMo li a {
   header .inner .btn {
     display: block;
   }
-  header .inner .menuMobile {
-    width: 270px;
-    height: 100vh;
-    background-color: #555;
-    position: fixed;
-    top: 0;
-    padding: 35px 35px;
-    z-index: 10;
-    transition: 0.5s;
-  }
-  header .inner .menuMobile.on {
-    left: 0;
-  }
-  header .inner .menuMobile h1 {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #000;
-  }
-  header .inner .menuMobile h1 a {
-    display: block;
-    font: bold 30px/1 "Sedgwick Ave Display";
-    color: orange;
-    text-align: center;
-  }
-  header .inner .menuMobile #menuMo li a {
-    display: block;
-    width: 100%;
-    padding: 30px 0;
-    border-bottom: 1px solid #444;
-    font: bold 20px/1 "arial";
-    color: #aaa;
-    text-align: center;
-  }
 }
 #slider {
   width: 100%;
@@ -186,6 +154,28 @@ header .inner .menuMobile #menuMo li a {
   right: 50px;
 }
 
+@media screen and (max-width: 639px) {
+  #slider {
+    width: 100%;
+    height: 100%;
+  }
+  .prev {
+    position: absolute;
+    top: 30%;
+  }
+  .prev img {
+    width: 25px;
+    height: 70px;
+  }
+  .next {
+    position: absolute;
+    top: 30%;
+  }
+  .next img {
+    width: 25px;
+    height: 70px;
+  }
+}
 #news {
   width: 100%;
   padding: 200px 0;
@@ -387,47 +377,6 @@ footer .inner p {
   background-color: #fff;
   color: #555;
 }
-#header_sub .inner .btn {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: none;
-  font-size: 20px;
-  color: #fff;
-}
-#header_sub .inner .menuMobile {
-  width: 270px;
-  height: 100vh;
-  background-color: #555;
-  position: fixed;
-  top: 0;
-  padding: 35px 35px;
-  z-index: 10;
-  transition: 0.5s;
-}
-#header_sub .inner .menuMobile.on {
-  left: 0;
-}
-#header_sub .inner .menuMobile h1 {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #000;
-}
-#header_sub .inner .menuMobile h1 a {
-  display: block;
-  font: bold 30px/1 "Sedgwick Ave Display";
-  color: orange;
-  text-align: center;
-}
-#header_sub .inner .menuMobile #menuMo li a {
-  display: block;
-  width: 100%;
-  padding: 30px 0;
-  border-bottom: 1px solid #444;
-  font: bold 20px/1 "arial";
-  color: #aaa;
-  text-align: center;
-}
 
 .content {
   width: 100%;
@@ -482,6 +431,26 @@ footer .inner p {
   color: #fff;
 }
 
+@media screen and (max-width: 639px) {
+  #header_sub .inner {
+    width: 100%;
+  }
+  #header_sub .inner .pic {
+    width: 240px;
+    height: 80px;
+  }
+  #header_sub .inner .pic a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #header_sub .inner nav #menuWeb {
+    display: none;
+  }
+  #header_sub .inner .btn {
+    display: block;
+  }
+}
 #visual {
   position: relative;
   width: 100%;
@@ -678,6 +647,41 @@ footer .inner p {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 639px) {
+  #member .inner {
+    width: 100%;
+  }
+  #member .inner .wrap {
+    width: 100%;
+    display: block;
+    padding: 0 50px;
+  }
+  #member .inner .wrap article {
+    width: 100%;
+    float: none;
+  }
+  #member .inner .wrap article .pic {
+    width: 100%;
+    height: 100%;
+  }
+  #member .inner .wrap article h2 {
+    font: 24px/1 "Black And White Picture";
+    color: yellow;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+  }
+  #member .inner .wrap article p {
+    font: 16px/1.4 "arial";
+    color: #aaa;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+  }
+  #member .inner .wrap article b {
+    font: 20px/1.4 "arial";
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}
 .map {
   width: 100%;
   padding: 200px 0;

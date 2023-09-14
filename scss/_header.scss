@@ -115,43 +115,6 @@ header{
             .btn{
                 display: block;
             }
-            .menuMobile{
-                width: 270px;
-                height: 100vh;
-                background-color: #555;
-                position: fixed;
-                top: 0;
-                // left: -270px;
-                padding: 35px 35px;
-                z-index: 10;
-                transition: 0.5s;
-                &.on{
-                    left: 0;
-                }
-                h1{
-                    padding-bottom: 30px;
-                    border-bottom: 1px solid #000;
-                    a{
-                        display: block;
-                        font: bold 30px/1 "Sedgwick Ave Display";
-                        color: orange;
-                        text-align: center;
-                    }
-                }
-                #menuMo{
-                    li{
-                        a{
-                            display: block;
-                            width: 100%;
-                            padding: 30px 0;
-                            border-bottom: 1px solid #444;
-                            font: bold 20px/1 "arial";
-                            color: #aaa;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
         }    
     }
 }
