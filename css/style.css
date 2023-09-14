@@ -28,10 +28,12 @@ header .inner .pic {
   position: absolute;
   left: 30px;
   bottom: 20px;
-}
-header .inner .pic a img {
   width: 300px;
   height: 100px;
+}
+header .inner .pic a img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 header .inner nav #menuWeb {
@@ -52,7 +54,101 @@ header .inner nav #menuWeb li a:hover {
   background-color: #fff;
   color: #555;
 }
+header .inner .btn {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  font-size: 20px;
+  color: #fff;
+}
+header .inner .menuMobile {
+  width: 270px;
+  height: 100vh;
+  background-color: #555;
+  position: fixed;
+  top: 0;
+  left: -270px;
+  padding: 35px 35px;
+  z-index: 10;
+  transition: 0.5s;
+}
+header .inner .menuMobile.on {
+  left: 0;
+}
+header .inner .menuMobile h1 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+header .inner .menuMobile h1 a {
+  display: block;
+  font: bold 30px/1 "Sedgwick Ave Display";
+  color: orange;
+  text-align: center;
+}
+header .inner .menuMobile #menuMo li a {
+  display: block;
+  width: 100%;
+  padding: 30px 0;
+  border-bottom: 1px solid #444;
+  font: bold 20px/1 "arial";
+  color: #aaa;
+  text-align: center;
+}
 
+@media screen and (max-width: 639px) {
+  header .inner {
+    width: 100%;
+  }
+  header .inner .pic {
+    width: 240px;
+    height: 80px;
+  }
+  header .inner .pic a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  header .inner nav #menuWeb {
+    display: none;
+  }
+  header .inner .btn {
+    display: block;
+  }
+  header .inner .menuMobile {
+    width: 270px;
+    height: 100vh;
+    background-color: #555;
+    position: fixed;
+    top: 0;
+    padding: 35px 35px;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  header .inner .menuMobile.on {
+    left: 0;
+  }
+  header .inner .menuMobile h1 {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000;
+  }
+  header .inner .menuMobile h1 a {
+    display: block;
+    font: bold 30px/1 "Sedgwick Ave Display";
+    color: orange;
+    text-align: center;
+  }
+  header .inner .menuMobile #menuMo li a {
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #444;
+    font: bold 20px/1 "arial";
+    color: #aaa;
+    text-align: center;
+  }
+}
 #slider {
   width: 100%;
   height: 100vh;
@@ -265,10 +361,12 @@ footer .inner p {
   position: absolute;
   left: 30px;
   bottom: 20px;
-}
-#header_sub .inner .pic a img {
   width: 300px;
   height: 100px;
+}
+#header_sub .inner .pic a img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 #header_sub .inner nav #menuWeb {
@@ -288,6 +386,47 @@ footer .inner p {
 #header_sub .inner nav #menuWeb li a:hover {
   background-color: #fff;
   color: #555;
+}
+#header_sub .inner .btn {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  font-size: 20px;
+  color: #fff;
+}
+#header_sub .inner .menuMobile {
+  width: 270px;
+  height: 100vh;
+  background-color: #555;
+  position: fixed;
+  top: 0;
+  padding: 35px 35px;
+  z-index: 10;
+  transition: 0.5s;
+}
+#header_sub .inner .menuMobile.on {
+  left: 0;
+}
+#header_sub .inner .menuMobile h1 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+#header_sub .inner .menuMobile h1 a {
+  display: block;
+  font: bold 30px/1 "Sedgwick Ave Display";
+  color: orange;
+  text-align: center;
+}
+#header_sub .inner .menuMobile #menuMo li a {
+  display: block;
+  width: 100%;
+  padding: 30px 0;
+  border-bottom: 1px solid #444;
+  font: bold 20px/1 "arial";
+  color: #aaa;
+  text-align: center;
 }
 
 .content {
@@ -357,47 +496,51 @@ footer .inner p {
   opacity: 0;
   z-index: 1;
   transition: opacity 1s;
+  display: flex;
+  justify-content: space-between;
+  padding: 200px 0;
 }
-#visual article img {
+#visual article .pic {
+  width: 50%;
+  overflow: hidden;
+  padding-left: 300px;
+}
+#visual article .pic img {
   width: 500px;
   height: 500px;
-  position: absolute;
-  top: 20%;
-  left: 20%;
+  object-fit: cover;
 }
-#visual article h2 {
-  font: bold 48px/1.3 "Black And White Picture";
-  position: absolute;
-  top: 20%;
-  left: 60%;
-  color: yellow;
+#visual article .wrap {
+  width: 50%;
+  text-align: center;
+  padding-right: 200px;
 }
-#visual article strong {
+#visual article .wrap h2 {
+  font: bold 48px/1.3 "Sedgwick Ave Display";
+  color: orange;
+  margin-bottom: 10px;
+}
+#visual article .wrap strong {
   font: bold 28px/1 "Black And White Picture";
-  position: absolute;
-  top: 27%;
-  left: 60%;
-  color: yellow;
+  color: orange;
 }
-#visual article ul {
-  position: absolute;
-  top: 33%;
-  left: 55%;
+#visual article .wrap ul {
+  margin-bottom: 10px;
 }
-#visual article ul a {
+#visual article .wrap ul a {
   display: block;
-  font: normal 20px/1.5 "Black And White Picture";
+  font: normal 20px/1.5 "arial";
   color: #777;
 }
-#visual article ul a:hover {
+#visual article .wrap ul a:hover {
   color: #fff;
 }
-#visual article p {
-  position: absolute;
-  top: 75%;
-  left: 55%;
-  font: 16px/1 "Black And White Picture";
+#visual article .wrap p {
+  font: 16px/1 "arial";
   color: #ccc;
+}
+#visual article:nth-of-type(3) h2, #visual article:nth-of-type(3) strong {
+  color: yellow;
 }
 #visual article.on {
   opacity: 1;
@@ -559,43 +702,43 @@ footer .inner p {
   border: 1px solid #fff;
 }
 
-#story {
+#hestory {
   width: 100%;
   padding: 100px 0;
 }
-#story h1 {
+#hestory h1 {
   font: bold 48px/1 "Sedgwick Ave Display";
   color: orange;
   margin-bottom: 100px;
   text-align: center;
 }
-#story article {
+#hestory article {
   width: 1180px;
   height: 100vh;
   position: relative;
   padding-top: 100px;
   margin: 0 auto;
 }
-#story article:nth-of-type(1) {
+#hestory article:nth-of-type(1) {
   padding-top: 0px;
 }
-#story article h2 {
+#hestory article h2 {
   font: bold 24px/1 "Black And White Picture";
   color: #fff;
   text-align: center;
   margin-bottom: 30px;
 }
-#story article h2 span {
+#hestory article h2 span {
   font: bold 36px/1 "arial";
   color: #fff;
 }
-#story article p {
+#hestory article p {
   width: 100%;
   font: 16px/2 "arial";
   color: #fff;
   margin-bottom: 30px;
 }
-#story article .pic {
+#hestory article .pic {
   width: 500px;
   height: 350px;
   display: flex;
@@ -603,81 +746,13 @@ footer .inner p {
   align-items: center;
   margin: 0 auto;
 }
-#story article .pic img {
+#hestory article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#story article b {
+#hestory article b {
   color: aqua;
-}
-
-h1 {
-  font: bold 48px/1 "Sedgwick Ave Display";
-  color: orange;
-  text-align: center;
-  padding-top: 100px;
-}
-
-.vidList {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.vidList article {
-  width: 48%;
-  height: 500px;
-  border: 1px solid #555;
-  margin-bottom: 40px;
-}
-.vidList article .pic {
-  display: block;
-  width: 100%;
-  height: 60%;
-  padding: 10px;
-}
-.vidList article .pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.vidList article .con {
-  width: 100%;
-  height: 40%;
-  padding: 10px;
-}
-.vidList article .con h2 {
-  font: bold 24px "arial";
-  color: #fff;
-  margin-bottom: 15px;
-  width: 100%;
-}
-.vidList article .con p {
-  font: 16px/1 "arial";
-  color: #fff;
-  margin-bottom: 15px;
-}
-.vidList .pop {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  padding: 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.vidList .pop .btnClose {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  color: #fff;
-  cursor: pointer;
 }
 
 body {

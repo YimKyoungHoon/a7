@@ -24,8 +24,6 @@ btnPlay.addEventListener("click", (e) => {
         return;
     } else{
         startRolling();
-        
-
     }
 });
 
